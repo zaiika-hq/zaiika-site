@@ -135,7 +135,7 @@ export default function App() {
         </h1>
 
         <p className="mt-5 max-w-md text-lg text-balance text-muted-foreground">
-          Good food takes time. So does what we're building. Join the waitlist for the first taste.
+          A smarter way to run your business is on its way. Be the first to try it.
         </p>
 
         {(WAITLIST_READY || import.meta.env.DEV) && (
