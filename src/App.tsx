@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-// The waitlist is a Google Form with one email question. Set both values once the form exists.
-const WAITLIST_FORM_ACTION = ""
-const WAITLIST_EMAIL_FIELD = ""
+// The waitlist is a Google Form with one email question.
+const WAITLIST_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSdxBkyrlkT2XN65ecL2G7cdEM1wbcJJ9JE8c1PlyxsXcGecWA/formResponse"
+const WAITLIST_EMAIL_FIELD = "entry.1414753828"
 const WAITLIST_READY = Boolean(WAITLIST_FORM_ACTION && WAITLIST_EMAIL_FIELD)
 
 const STAR_COUNT = 90
