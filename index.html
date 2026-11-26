@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zaiika</title>
+  <meta name="description" content="Zaiika is building the AI operating system for restaurants. Coming soon.">
+  <meta property="og:title" content="Zaiika">
+  <meta property="og:description" content="The AI operating system for restaurants. Coming soon.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c2410c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23fff'%3EZ%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #fbf7f2;
+      --text: #1c1917;
+      --muted: #57534e;
+      --accent: #c2410c;
+      --accent-text: #ffffff;
+      --line: #e7e1d9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14110f;
+        --text: #f5f0ea;
+        --muted: #a8a29e;
+        --accent: #fb923c;
+        --accent-text: #1c1917;
+        --line: #2e2925;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 18vh 1rem 4rem;
+    }
+    .mark {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 12vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin: 0;
+    }
+    .mark span { color: var(--accent); }
+    .tagline {
+      font-size: clamp(1.15rem, 4vw, 1.5rem);
+      color: var(--muted);
+      margin: 1.25rem 0 0;
+    }
+    .status {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.35rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    section {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+    h2 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+    p { margin: 0 0 1rem; }
+    .button {
+      display: inline-block;
+      min-height: 44px;
+      padding: 0.7rem 1.2rem;
+      border-radius: 0.6rem;
+      background: var(--accent);
+      color: var(--accent-text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    footer {
+      max-width: 44rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="mark">Zaiika<span>.</span></h1>
+    <p class="tagline">The AI operating system for restaurants.</p>
+    <span class="status">Coming soon · Built in India</span>
+
+    <section aria-labelledby="join">
+      <h2 id="join">Build it with us</h2>
+      <p>We're looking for founding engineers who enjoy backend, frontend, infrastructure or AI work.</p>
+      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd2rNC1VI0FQkPB8dMvo5JFXZQfg7RuQXIbgrsAhVCQgeJWLA/viewform">Apply to join</a>
+    </section>
+  </main>
+  <footer>© 2026 Zaiika</footer>
+</body>
+</html>
