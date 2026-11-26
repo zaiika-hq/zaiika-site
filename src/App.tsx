@@ -1,5 +1,6 @@
 import "@fontsource/instrument-serif/400-italic.css"
 
+import { Flame } from "lucide-react"
 import { type CSSProperties, type FormEvent, useMemo, useState } from "react"
 
 import { Badge } from "@/components/ui/badge"
@@ -120,12 +121,13 @@ export default function App() {
       </div>
 
       <main className="flex flex-1 flex-col items-center justify-center px-4 pb-[16vh] text-center">
-        <Badge variant="outline" className="mb-7 gap-2 rounded-full border-white/15 bg-white/[0.03] px-3 py-1 text-sm backdrop-blur">
-          <span className="relative flex size-2" aria-hidden>
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-70 motion-reduce:animate-none" />
-            <span className="relative inline-flex size-2 rounded-full bg-primary" />
-          </span>
-          Zaiika · Coming soon
+        <Badge
+          variant="outline"
+          className="mb-7 h-auto gap-2 rounded-full border-white/10 bg-white/[0.04] px-4 py-1.5 text-sm font-normal text-white/90 backdrop-blur"
+        >
+          Zaiika
+          <Flame className="size-3.5 fill-primary text-primary" aria-hidden />
+          Coming soon
         </Badge>
 
         <h1 className="font-heading max-w-3xl text-5xl font-semibold tracking-tight text-balance sm:text-7xl">
