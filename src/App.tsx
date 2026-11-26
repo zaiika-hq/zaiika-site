@@ -1,6 +1,5 @@
 import "@fontsource/instrument-serif/400-italic.css"
 
-import { Flame } from "lucide-react"
 import { type CSSProperties, type FormEvent, useMemo, useState } from "react"
 
 import { Badge } from "@/components/ui/badge"
@@ -111,6 +110,7 @@ function Waitlist() {
 }
 
 export default function App() {
+
   return (
     <div className="relative isolate flex min-h-svh flex-col overflow-hidden bg-background text-foreground">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
@@ -125,16 +125,20 @@ export default function App() {
           variant="outline"
           className="mb-7 h-auto gap-2 rounded-full border-white/10 bg-white/[0.04] px-4 py-1.5 text-sm font-normal text-white/90 backdrop-blur"
         >
+          <span aria-hidden className="relative flex size-2">
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60 motion-reduce:hidden" />
+            <span className="relative inline-flex size-2 rounded-full bg-primary" />
+          </span>
           Zaiika
-          <Flame className="size-3.5 fill-primary text-primary" aria-hidden />
-          Coming soon
+          <span aria-hidden className="h-3.5 w-px bg-white/15" />
+          <span className="text-white/60">Coming soon</span>
         </Badge>
 
         <h1 className="font-heading max-w-3xl text-5xl font-semibold tracking-tight text-balance sm:text-7xl">
           Something new is <span className="serif-italic text-[1.08em]">cooking.</span>
         </h1>
 
-        <p className="mt-5 max-w-md text-lg text-balance text-muted-foreground">
+        <p className="mt-5 max-w-md text-lg leading-relaxed font-light tracking-wide text-balance text-white/70">
           A smarter way to run your business is on its way. Be the first to try it.
         </p>
 
