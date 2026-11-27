@@ -224,3 +224,30 @@
     .star { animation: none; }
 }
 
+
+/* Logo: the dome tips open to the right on a hinge at its left edge, steam rises, then it closes. */
+@keyframes cloche-open {
+    0%, 55%, 100% { transform: translate(0, 0) rotate(0); }
+    70%, 85% { transform: translate(-1px, -4px) rotate(-16deg); }
+}
+
+@keyframes cloche-steam {
+    0%, 60%, 100% { opacity: 0; transform: translateY(2px); }
+    75%, 88% { opacity: 1; transform: translateY(-1px); }
+}
+
+.cloche-dome {
+    transform-box: view-box;
+    transform-origin: 6px 29px;
+    animation: cloche-open 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.cloche-steam {
+    transform-box: view-box;
+    opacity: 0;
+    animation: cloche-steam 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cloche-dome, .cloche-steam { animation: none; }
+}
