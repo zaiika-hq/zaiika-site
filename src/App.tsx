@@ -8,22 +8,11 @@ import { Waitlist } from "@/components/site/waitlist"
 function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-10 px-4 py-5">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between">
+      <div className="mx-auto max-w-5xl">
         <a href="#top" className="text-lg font-semibold tracking-tight">
           Zaiika
         </a>
-        <div className="flex items-center gap-4 text-sm text-white/70 sm:gap-6">
-          <a href="#product" className="hidden hover:text-foreground sm:inline">
-            Product
-          </a>
-          <a
-            href="#early-access"
-            className="rounded-full border border-white/15 px-4 py-1.5 text-foreground hover:bg-white/5"
-          >
-            Early access
-          </a>
-        </div>
-      </nav>
+      </div>
     </header>
   )
 }
@@ -56,7 +45,7 @@ function Hero() {
           Run your restaurant, <span className="serif-italic text-[1.08em]">smarter.</span>
         </h1>
 
-        <p className="mt-5 max-w-lg text-lg leading-relaxed font-light tracking-wide text-balance text-white/70">
+        <p className="mt-5 max-w-lg text-lg leading-relaxed tracking-wide text-balance text-white/70">
           Zaiika is an AI-first operating system for restaurants in India. Be among the first to try it.
         </p>
 

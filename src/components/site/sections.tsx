@@ -11,7 +11,7 @@ const PILLARS: Pillar[] = [
   {
     icon: ChefHat,
     title: "Smooth service",
-    text: "From the first order to the last bill of the night, Zaiika keeps the counter, the floor and the kitchen in step.",
+    text: "From the first order to the last bill of the night, Zaiika keeps the counter, the floor and the kitchen working together.",
   },
   {
     icon: IndianRupee,
@@ -26,7 +26,7 @@ const PILLARS: Pillar[] = [
   {
     icon: Store,
     title: "Made for India",
-    text: "Built around GST, UPI and the way Indian restaurants, cafés and cloud kitchens actually run.",
+    text: "Built around GST, UPI and the way Indian restaurants, cafes and cloud kitchens actually run.",
   },
 ]
 
@@ -43,7 +43,7 @@ export function About() {
   return (
     <section id="product" className="px-4 pt-8 pb-16 sm:pt-12 sm:pb-20">
       <SectionHeading eyebrow="What we're building" title="An AI-first operating system for restaurants" />
-      <p className="mx-auto mt-5 max-w-2xl text-center text-lg leading-relaxed font-light text-white/70">
+      <p className="mx-auto mt-5 max-w-2xl text-center text-lg leading-relaxed text-white/70">
         Zaiika brings everything a restaurant runs on into one simple product, and helps owners make better decisions
         every day.
       </p>
@@ -52,7 +52,7 @@ export function About() {
           <div key={title} className="rounded-2xl border border-white/10 bg-card/60 p-6">
             <Icon aria-hidden className="size-6 text-primary" />
             <h3 className="mt-4 text-lg font-medium">{title}</h3>
-            <p className="mt-2 leading-relaxed font-light text-white/70">{text}</p>
+            <p className="mt-2 leading-relaxed text-white/70">{text}</p>
           </div>
         ))}
       </div>
@@ -65,7 +65,7 @@ export function EarlyAccess() {
     <section id="early-access" className="px-4 pt-8 pb-24 sm:pb-28">
       <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-gradient-to-b from-primary/15 to-transparent px-6 py-14 text-center">
         <SectionHeading eyebrow="Early access" title="Your first month is on us" />
-        <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed font-light text-white/70">
+        <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/70">
           We are starting with a small group of restaurants. Those who join early get their first month of Zaiika free,
           with no card needed.
         </p>
