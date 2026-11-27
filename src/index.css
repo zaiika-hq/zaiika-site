@@ -1,13 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/dm-sans";
+@import "@fontsource-variable/sora";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
     --font-heading: var(--font-sans);
-    --font-sans: 'DM Sans Variable', sans-serif;
+    --font-sans: 'Sora Variable', sans-serif;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -129,15 +129,21 @@
     }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
     }
 }
 
-/* Zaiika: chili */
+/* Zaiika: sindoor red. --h is the brand hue; every warm colour below is derived from it. */
 :root {
-    --primary: oklch(0.57 0.23 27);
+    --h: 22;
+    --c: 1.05;
+    --bg-c: 0.025;
+    --font-accent: "Instrument Serif", Georgia, serif;
+    --primary: oklch(0.57 0.23 var(--h));
     --primary-foreground: oklch(0.99 0.01 30);
-    --ring: oklch(0.57 0.23 27);
-    --chili: oklch(0.57 0.23 27);
+    --ring: oklch(0.57 0.23 var(--h));
+    --chili: oklch(0.57 0.23 var(--h));
     --ember: oklch(0.72 0.18 50);
     --glow-a: oklch(0.6 0.23 27 / 0.22);
     --glow-b: oklch(0.75 0.17 50 / 0.18);
@@ -145,16 +151,16 @@
 }
 
 .dark {
-    --background: oklch(0.12 0.012 25);
-    --card: oklch(0.17 0.015 25);
-    --muted-foreground: oklch(0.72 0.02 30);
-    --primary: oklch(0.66 0.23 27);
-    --primary-foreground: oklch(0.99 0.01 30);
-    --ring: oklch(0.66 0.23 27);
-    --chili: oklch(0.66 0.23 27);
-    --ember: oklch(0.78 0.17 55);
-    --glow-a: oklch(0.6 0.24 27 / 0.32);
-    --glow-b: oklch(0.72 0.18 50 / 0.2);
+    --background: oklch(0.12 var(--bg-c) calc(var(--h) - 2));
+    --card: oklch(0.17 calc(var(--bg-c) + 0.003) calc(var(--h) - 2));
+    --muted-foreground: oklch(0.72 0.02 calc(var(--h) + 3));
+    --primary: oklch(0.66 calc(0.23 * var(--c)) var(--h));
+    --primary-foreground: oklch(0.99 0.01 calc(var(--h) + 3));
+    --ring: oklch(0.66 calc(0.23 * var(--c)) var(--h));
+    --chili: oklch(0.66 calc(0.23 * var(--c)) var(--h));
+    --ember: oklch(0.78 0.17 calc(var(--h) + 28));
+    --glow-a: oklch(0.6 0.24 var(--h) / 0.32);
+    --glow-b: oklch(0.72 0.18 calc(var(--h) + 23) / 0.2);
     --grid: oklch(1 0 0 / 0.045);
 }
 
@@ -166,7 +172,7 @@
 .star {
     position: absolute;
     border-radius: 9999px;
-    background: oklch(0.98 0.01 60);
+    background: oklch(0.98 0.01 calc(var(--h) + 33));
     opacity: var(--o);
     animation: twinkle var(--t) ease-in-out var(--d) infinite;
 }
@@ -174,41 +180,41 @@
 .sky-glow {
     position: absolute;
     left: 50%;
-    bottom: 20vh;
+    bottom: max(20vh, calc(100% - 36rem));
     width: 90vw;
     height: 85vh;
     transform: translateX(-50%);
     background:
-        radial-gradient(ellipse 30% 45% at 50% 100%, oklch(0.78 0.16 40 / 0.6), transparent 70%),
-        radial-gradient(ellipse 65% 85% at 50% 100%, oklch(0.5 0.2 25 / 0.45), transparent 75%);
+        radial-gradient(ellipse 30% 45% at 50% 100%, oklch(0.78 calc(0.16 * var(--c)) calc(var(--h) + 13) / 0.6), transparent 70%),
+        radial-gradient(ellipse 65% 85% at 50% 100%, oklch(0.5 calc(0.2 * var(--c)) calc(var(--h) - 2) / 0.45), transparent 75%);
     filter: blur(30px);
 }
 
 .planet, .planet-rim {
     position: absolute;
     left: 50%;
-    top: 80vh;
-    width: 340vw;
+    top: max(80vh, 36rem);
+    width: max(340vw, 160rem);
     aspect-ratio: 1;
     transform: translateX(-50%);
     border-radius: 9999px;
 }
 
 .planet {
-    background: oklch(0.11 0.006 25);
-    box-shadow: 0 -30px 120px -40px oklch(0.65 0.22 30 / 0.7);
+    background: oklch(0.11 calc(var(--bg-c) * 0.5) calc(var(--h) - 2));
+    box-shadow: 0 -30px 120px -40px oklch(0.65 calc(0.22 * var(--c)) calc(var(--h) + 3) / 0.7);
 }
 
 .planet-rim {
     box-shadow:
-        inset 0 3px 0 0 oklch(0.99 0.02 60),
-        0 -2px 18px 0 oklch(0.9 0.08 45 / 0.8),
-        0 -8px 60px 0 oklch(0.7 0.2 30 / 0.6);
+        inset 0 3px 0 0 oklch(0.99 0.02 calc(var(--h) + 33)),
+        0 -2px 18px 0 oklch(0.9 calc(0.08 * var(--c)) calc(var(--h) + 18) / 0.8),
+        0 -8px 60px 0 oklch(0.7 calc(0.2 * var(--c)) calc(var(--h) + 3) / 0.6);
     mask-image: linear-gradient(90deg, transparent 30%, black 46%, black 54%, transparent 70%);
 }
 
 .serif-italic {
-    font-family: "Instrument Serif", Georgia, serif;
+    font-family: var(--font-accent);
     font-style: italic;
     font-weight: 400;
     letter-spacing: -0.01em;
@@ -218,3 +224,30 @@
     .star { animation: none; }
 }
 
+
+/* Logo: the dome tips open to the right on a hinge at its left edge, steam rises, then it closes. */
+@keyframes cloche-open {
+    0%, 55%, 100% { transform: translate(0, 0) rotate(0); }
+    70%, 85% { transform: translate(-1px, -4px) rotate(-16deg); }
+}
+
+@keyframes cloche-steam {
+    0%, 60%, 100% { opacity: 0; transform: translateY(2px); }
+    75%, 88% { opacity: 1; transform: translateY(-1px); }
+}
+
+.cloche-dome {
+    transform-box: view-box;
+    transform-origin: 6px 29px;
+    animation: cloche-open 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.cloche-steam {
+    transform-box: view-box;
+    opacity: 0;
+    animation: cloche-steam 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cloche-dome, .cloche-steam { animation: none; }
+}
