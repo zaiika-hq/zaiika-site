@@ -11,7 +11,7 @@ const PILLARS: Pillar[] = [
   {
     icon: ChefHat,
     title: "Smooth service",
-    text: "From the first order to the last bill of the night, Zaiika keeps the counter, the floor and the kitchen working together.",
+    text: "The counter, the floor and the kitchen work as one, from the first order to the last bill of the night.",
   },
   {
     icon: IndianRupee,
@@ -54,7 +54,7 @@ export function About() {
               <Icon aria-hidden className="size-6 shrink-0 text-primary" />
               <h3 className="text-lg font-medium">{title}</h3>
             </div>
-            <p className="mt-2 leading-relaxed text-white/70">{text}</p>
+            <p className="mt-3 leading-relaxed text-white/70">{text}</p>
           </div>
         ))}
       </div>

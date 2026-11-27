@@ -134,11 +134,11 @@
     }
 }
 
-/* Zaiika: curry leaf green. --h is the brand hue; every warm colour below is derived from it. */
+/* Zaiika: sindoor red. --h is the brand hue; every warm colour below is derived from it. */
 :root {
-    --h: 150;
-    --c: 1;
-    --bg-c: 0.012;
+    --h: 22;
+    --c: 1.05;
+    --bg-c: 0.025;
     --font-accent: "Instrument Serif", Georgia, serif;
     --primary: oklch(0.57 0.23 var(--h));
     --primary-foreground: oklch(0.99 0.01 30);
