@@ -7,10 +7,16 @@ import { Waitlist } from "@/components/site/waitlist"
 
 function Header() {
   return (
-    <header className="absolute inset-x-0 top-0 z-10 px-4 py-5">
-      <div className="mx-auto max-w-5xl">
-        <a href="#top" className="text-lg font-semibold tracking-tight">
-          Zaiika
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-background/70 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-6xl items-center px-4 sm:h-18 sm:px-6">
+        <a href="#top" aria-label="Zaiika home" className="flex items-center gap-2.5">
+          <span
+            aria-hidden
+            className="flex size-9 items-center justify-center rounded-xl bg-primary text-lg font-bold text-primary-foreground shadow-lg shadow-primary/30 sm:size-10 sm:text-xl"
+          >
+            Z
+          </span>
+          <span className="text-xl font-semibold tracking-tight sm:text-2xl">Zaiika</span>
         </a>
       </div>
     </header>
@@ -27,7 +33,7 @@ function Hero() {
         <div className="planet-rim" />
       </div>
 
-      <div className="flex flex-1 flex-col items-center justify-center px-4 pt-24 pb-[max(16vh,6rem)] text-center">
+      <div className="flex flex-1 flex-col items-center justify-center px-4 pt-28 pb-[max(16vh,6rem)] text-center">
         <Badge
           variant="outline"
           className="mb-7 h-auto gap-2 rounded-full border-white/10 bg-white/[0.04] px-4 py-1.5 text-sm font-normal text-white/90 backdrop-blur"
