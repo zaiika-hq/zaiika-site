@@ -37,12 +37,6 @@ function Hero() {
           Zaiika is an AI-first operating system for restaurants in India. Be among the first to try it.
         </p>
 
-        <a
-          href="#early-access"
-          className="mt-8 inline-flex h-11 items-center rounded-lg bg-white px-6 text-base font-medium text-black hover:bg-white/90"
-        >
-          Get early access
-        </a>
       </div>
     </section>
   )
