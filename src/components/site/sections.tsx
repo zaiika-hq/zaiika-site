@@ -50,8 +50,10 @@ export function About() {
       <div className="mx-auto mt-14 grid max-w-5xl gap-4 sm:grid-cols-2">
         {PILLARS.map(({ icon: Icon, title, text }) => (
           <div key={title} className="rounded-2xl border border-white/10 bg-card/60 p-6">
-            <Icon aria-hidden className="size-6 text-primary" />
-            <h3 className="mt-4 text-lg font-medium">{title}</h3>
+            <div className="flex items-center gap-3">
+              <Icon aria-hidden className="size-6 shrink-0 text-primary" />
+              <h3 className="text-lg font-medium">{title}</h3>
+            </div>
             <p className="mt-2 leading-relaxed text-white/70">{text}</p>
           </div>
         ))}

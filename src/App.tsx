@@ -1,6 +1,7 @@
 import "@fontsource/instrument-serif/400-italic.css"
 
 import { Badge } from "@/components/ui/badge"
+import { Logo } from "@/components/site/logo"
 import { About, EarlyAccess, Footer } from "@/components/site/sections"
 import { Stars } from "@/components/site/stars"
 import { Waitlist } from "@/components/site/waitlist"
@@ -9,14 +10,8 @@ function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-background/70 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center px-4 sm:h-18 sm:px-6">
-        <a href="#top" aria-label="Zaiika home" className="flex items-center gap-2.5">
-          <span
-            aria-hidden
-            className="flex size-9 items-center justify-center rounded-xl bg-primary text-lg font-bold text-primary-foreground shadow-lg shadow-primary/30 sm:size-10 sm:text-xl"
-          >
-            Z
-          </span>
-          <span className="text-xl font-semibold tracking-tight sm:text-2xl">Zaiika</span>
+        <a href="#top" aria-label="Zaiika home">
+          <Logo />
         </a>
       </div>
     </header>
