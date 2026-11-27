@@ -12,7 +12,7 @@ function Header() {
         <a href="#top" className="text-lg font-semibold tracking-tight">
           Zaiika
         </a>
-        <div className="flex items-center gap-6 text-sm text-white/70">
+        <div className="flex items-center gap-4 text-sm text-white/70 sm:gap-6">
           <a href="#product" className="hidden hover:text-foreground sm:inline">
             Product
           </a>
@@ -30,7 +30,7 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="relative isolate flex min-h-svh flex-col overflow-hidden">
+    <section id="top" className="relative isolate flex min-h-[max(100svh,40rem)] flex-col overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <Stars />
         <div className="sky-glow" />
@@ -38,7 +38,7 @@ function Hero() {
         <div className="planet-rim" />
       </div>
 
-      <div className="flex flex-1 flex-col items-center justify-center px-4 pb-[16vh] text-center">
+      <div className="flex flex-1 flex-col items-center justify-center px-4 pt-24 pb-[max(16vh,6rem)] text-center">
         <Badge
           variant="outline"
           className="mb-7 h-auto gap-2 rounded-full border-white/10 bg-white/[0.04] px-4 py-1.5 text-sm font-normal text-white/90 backdrop-blur"
@@ -52,7 +52,7 @@ function Hero() {
           <span className="text-white/60">Early access</span>
         </Badge>
 
-        <h1 className="font-heading max-w-3xl text-5xl font-semibold tracking-tight text-balance sm:text-7xl">
+        <h1 className="font-heading max-w-3xl text-[2.5rem] leading-[1.1] font-semibold tracking-tight text-balance min-[400px]:text-5xl sm:text-6xl lg:text-7xl">
           Run your restaurant, <span className="serif-italic text-[1.08em]">smarter.</span>
         </h1>
 

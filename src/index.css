@@ -175,7 +175,7 @@
 .sky-glow {
     position: absolute;
     left: 50%;
-    bottom: 20vh;
+    bottom: max(20vh, calc(100% - 36rem));
     width: 90vw;
     height: 85vh;
     transform: translateX(-50%);
@@ -188,8 +188,8 @@
 .planet, .planet-rim {
     position: absolute;
     left: 50%;
-    top: 80vh;
-    width: 340vw;
+    top: max(80vh, 36rem);
+    width: max(340vw, 160rem);
     aspect-ratio: 1;
     transform: translateX(-50%);
     border-radius: 9999px;

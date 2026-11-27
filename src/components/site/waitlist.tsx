@@ -37,7 +37,7 @@ export function Waitlist({ id }: { id: string }) {
   return (
     <form
       onSubmit={submit}
-      className="flex w-full max-w-md items-center gap-1.5 rounded-xl border border-white/10 bg-black/80 p-1.5 shadow-2xl"
+      className="flex w-full max-w-md flex-col gap-2 rounded-xl border border-white/10 bg-black/80 p-2 shadow-2xl min-[420px]:flex-row min-[420px]:items-center min-[420px]:gap-1.5 min-[420px]:p-1.5"
     >
       <label htmlFor={id} className="sr-only">
         Email address
@@ -47,15 +47,15 @@ export function Waitlist({ id }: { id: string }) {
         type="email"
         required
         autoComplete="email"
-        placeholder="Your email"
+        placeholder="Your email address"
         value={email}
         onChange={(event) => setEmail(event.target.value)}
-        className="h-11 min-w-0 flex-1 border-0 bg-transparent px-3 text-base shadow-none focus-visible:ring-0 dark:bg-transparent"
+        className="h-11 w-full min-w-0 flex-1 border-0 bg-transparent px-3 text-base shadow-none focus-visible:ring-0 dark:bg-transparent"
       />
       <Button
         type="submit"
         size="lg"
-        className="h-11 shrink-0 rounded-lg bg-white px-5 text-base text-black hover:bg-white/90"
+        className="h-11 w-full shrink-0 rounded-lg bg-white min-[420px]:w-auto px-5 text-base text-black hover:bg-white/90"
         disabled={status === "sending"}
       >
         {status === "sending" ? "Joining…" : "Get early access"}
