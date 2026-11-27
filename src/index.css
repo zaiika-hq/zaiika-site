@@ -251,3 +251,26 @@
 @media (prefers-reduced-motion: reduce) {
     .cloche-dome, .cloche-steam { animation: none; }
 }
+
+/* Hero extras */
+@keyframes word-in {
+    from { opacity: 0; transform: translateY(0.35em); filter: blur(4px); }
+    to { opacity: 1; transform: none; filter: none; }
+}
+.word-in { animation: word-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
+
+@keyframes chip-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.chip-float { animation: chip-float 6s ease-in-out infinite; }
+
+@keyframes marquee {
+    to { transform: translateX(-50%); }
+}
+.marquee { animation: marquee 40s linear infinite; }
+.marquee-mask { mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+    .word-in, .chip-float, .marquee { animation: none; }
+}
