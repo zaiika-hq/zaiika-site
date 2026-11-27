@@ -1,22 +1,10 @@
 import "@fontsource/instrument-serif/400-italic.css"
 
 import { Badge } from "@/components/ui/badge"
-import { Logo } from "@/components/site/logo"
+import { Header } from "@/components/site/header"
 import { About, EarlyAccess, Footer } from "@/components/site/sections"
 import { Stars } from "@/components/site/stars"
 import { Waitlist } from "@/components/site/waitlist"
-
-function Header() {
-  return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-background/70 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center px-4 sm:h-18 sm:px-6">
-        <a href="#top" aria-label="Zaiika home">
-          <Logo />
-        </a>
-      </div>
-    </header>
-  )
-}
 
 function Hero() {
   return (

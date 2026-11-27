@@ -81,7 +81,7 @@ export function EarlyAccess() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 px-4 py-10">
+    <footer id="contact" className="border-t border-white/10 px-4 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-muted-foreground sm:flex-row sm:px-2">
         <p>
           <span className="font-medium text-foreground">Zaiika</span> · Built with care in India
