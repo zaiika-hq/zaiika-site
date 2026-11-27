@@ -37,26 +37,32 @@ function useActiveSection() {
       }
       setActive(current)
     }
+    // Any in-page link (nav, logo or a button in the page) marks its section as the one being read.
+    const onLinkClick = (event: MouseEvent) => {
+      const link = (event.target as Element).closest?.('a[href^="#"]')
+      const id = link?.getAttribute("href")?.slice(1)
+      if (id && SECTIONS.some((section) => section.id === id)) {
+        clicked.current = id
+        setActive(id)
+      }
+    }
     update()
+    document.addEventListener("click", onLinkClick)
     window.addEventListener("scroll", update, { passive: true })
     window.addEventListener("resize", update)
     return () => {
       window.clearTimeout(release)
+      document.removeEventListener("click", onLinkClick)
       window.removeEventListener("scroll", update)
       window.removeEventListener("resize", update)
     }
   }, [])
 
-  const select = (id: string) => {
-    clicked.current = id
-    setActive(id)
-  }
-
-  return { active, select }
+  return active
 }
 
 export function Header() {
-  const { active, select } = useActiveSection()
+  const active = useActiveSection()
   const [open, setOpen] = useState(false)
 
   const linkClass = (id: string) =>
@@ -67,20 +73,13 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-background/70 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-18 sm:px-6">
-        <a
-          href="#top"
-          aria-label="Zaiika home"
-          onClick={() => {
-            select("top")
-            setOpen(false)
-          }}
-        >
+        <a href="#top" aria-label="Zaiika home" onClick={() => setOpen(false)}>
           <Logo />
         </a>
 
         <nav aria-label="Sections" className="hidden items-center gap-1 md:flex">
           {SECTIONS.map(({ id, label }) => (
-            <a key={id} href={`#${id}`} onClick={() => select(id)} aria-current={active === id ? "true" : undefined} className={linkClass(id)}>
+            <a key={id} href={`#${id}`} aria-current={active === id ? "true" : undefined} className={linkClass(id)}>
               {label}
             </a>
           ))}
@@ -104,10 +103,7 @@ export function Header() {
             <a
               key={id}
               href={`#${id}`}
-              onClick={() => {
-                select(id)
-                setOpen(false)
-              }}
+              onClick={() => setOpen(false)}
               aria-current={active === id ? "true" : undefined}
               className={`block rounded-lg px-3 py-3 text-base ${
                 active === id ? "bg-white/10 text-foreground" : "text-white/70"

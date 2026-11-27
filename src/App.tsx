@@ -3,8 +3,8 @@ import "@fontsource/instrument-serif/400-italic.css"
 import { Badge } from "@/components/ui/badge"
 import { Header } from "@/components/site/header"
 import { About, EarlyAccess, Footer } from "@/components/site/sections"
+import { CityStrip, FloatingChips, RotatingWord, ScrollCue } from "@/components/site/hero-extras"
 import { Stars } from "@/components/site/stars"
-import { Waitlist } from "@/components/site/waitlist"
 
 function Hero() {
   return (
@@ -15,32 +15,32 @@ function Hero() {
         <div className="planet" />
         <div className="planet-rim" />
       </div>
+      <FloatingChips />
+      <ScrollCue />
 
       <div className="flex flex-1 flex-col items-center justify-center px-4 pt-28 pb-[max(16vh,6rem)] text-center">
         <Badge
           variant="outline"
-          className="mb-7 h-auto gap-2 rounded-full border-white/10 bg-white/[0.04] px-4 py-1.5 text-sm font-normal text-white/90 backdrop-blur"
+          className="mb-7 h-auto max-w-full gap-2 rounded-full border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-xs font-normal whitespace-normal text-white/90 backdrop-blur min-[400px]:text-sm sm:px-4"
         >
           <span aria-hidden className="relative flex size-2">
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60 motion-reduce:hidden" />
             <span className="relative inline-flex size-2 rounded-full bg-primary" />
           </span>
-          Restaurant OS
-          <span aria-hidden className="h-3.5 w-px bg-white/15" />
-          <span className="text-white/60">Early access</span>
+          The brain behind your restaurant
+          <span aria-hidden className="hidden h-3.5 w-px bg-white/15 sm:inline" />
+          <span className="hidden text-white/60 sm:inline">Early access</span>
         </Badge>
 
         <h1 className="font-heading max-w-3xl text-[2.5rem] leading-[1.1] font-semibold tracking-tight text-balance min-[400px]:text-5xl sm:text-6xl lg:text-7xl">
-          Run your restaurant, <span className="serif-italic text-[1.08em]">smarter.</span>
+          Run your restaurant, <span className="serif-italic text-[1.08em]"><RotatingWord /></span>
         </h1>
 
         <p className="mt-5 max-w-lg text-lg leading-relaxed tracking-wide text-balance text-white/70">
-          Zaiika is an AI-first operating system for restaurants in India. Be among the first to try it.
+          Zaiika remembers every order, bill and rupee, so you always know how your restaurant is really doing.
         </p>
+        <CityStrip />
 
-        <div className="mt-8 flex w-full justify-center">
-          <Waitlist id="email-hero" />
-        </div>
       </div>
     </section>
   )
