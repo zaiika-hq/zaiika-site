@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge"
 import { Header } from "@/components/site/header"
 import { About, EarlyAccess, Footer } from "@/components/site/sections"
 import { Stars } from "@/components/site/stars"
-import { Waitlist } from "@/components/site/waitlist"
 
 function Hero() {
   return (
@@ -38,9 +37,12 @@ function Hero() {
           Zaiika is an AI-first operating system for restaurants in India. Be among the first to try it.
         </p>
 
-        <div className="mt-8 flex w-full justify-center">
-          <Waitlist id="email-hero" />
-        </div>
+        <a
+          href="#early-access"
+          className="mt-8 inline-flex h-11 items-center rounded-lg bg-white px-6 text-base font-medium text-black hover:bg-white/90"
+        >
+          Get early access
+        </a>
       </div>
     </section>
   )
