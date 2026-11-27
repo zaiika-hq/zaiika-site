@@ -42,10 +42,9 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
 export function About() {
   return (
     <section id="product" className="px-4 pt-8 pb-16 sm:pt-12 sm:pb-20">
-      <SectionHeading eyebrow="What we're building" title="An AI-first operating system for restaurants" />
+      <SectionHeading eyebrow="What we're building" title="Your restaurant, understood" />
       <p className="mx-auto mt-5 max-w-2xl text-center text-lg leading-relaxed text-white/70">
-        Zaiika brings everything a restaurant runs on into one simple product, and helps owners make better decisions
-        every day.
+        Zaiika keeps track of everything that happens at the counter, in the kitchen and in your accounts, and makes sense of it for you.
       </p>
       <div className="mx-auto mt-14 grid max-w-5xl gap-4 sm:grid-cols-2">
         {PILLARS.map(({ icon: Icon, title, text }) => (
